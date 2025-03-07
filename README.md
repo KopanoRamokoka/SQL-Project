@@ -50,4 +50,25 @@ UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname)
 
 Exec sp_rename 'healthcare_dataset.Full_Name','Patients','COLUMN'
 
-ALTER TABLE healthcare_dataset DROP COLUMN Surname ```
+ALTER TABLE healthcare_dataset DROP COLUMN Surname
+```
+
+###### Results to code below
+![Screenshot 2025-03-07 140507](https://github.com/user-attachments/assets/59f1dade-6c69-45fb-b791-61b9ac4ba6db)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
