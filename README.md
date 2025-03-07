@@ -7,13 +7,10 @@ and supporting data-driven decision-making. By leveraging this dataset, healthca
 ![Screenshot 2025-03-05 210701](https://github.com/user-attachments/assets/1d0adaab-3146-4063-bac0-fc856a21a5fb)
 
 #### Data Cleaning Process
-Select*from healthcare_dataset
 Converting Name column to capital initial
 
-Select*from healthcare_dataset
----Converting Name column to capital initial
-
-```SELECT UPPER(Name) from healthcare_dataset
+```
+SELECT UPPER(Name) from healthcare_dataset
 UPDATE healthcare_dataset SET Name= UPPER(Name) from healthcare_dataset
 
 SELECT CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))from healthcare_dataset
