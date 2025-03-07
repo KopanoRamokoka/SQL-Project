@@ -7,7 +7,7 @@ and supporting data-driven decision-making. By leveraging this dataset, healthca
 ![Screenshot 2025-03-05 210701](https://github.com/user-attachments/assets/1d0adaab-3146-4063-bac0-fc856a21a5fb)
 
 #### Data Cleaning Process
-```Select*from healthcare_dataset
+``` Select*from healthcare_dataset
 Converting Name column to capital initial
 
 ```SELECT UPPER(Name) from healthcare_dataset
@@ -43,7 +43,7 @@ UPDATE healthcare_dataset SET Name=REPLACE(Name,'_','')
 SELECT CONCAT(Name,' ',Surname)as Full_Name from healthcare_dataset
 
 
-UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname)
+UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname) ```
 
 Exec sp_rename 'healthcare_dataset.Full_Name','Patients','COLUMN'
 
