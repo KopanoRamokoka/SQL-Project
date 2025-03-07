@@ -10,4 +10,44 @@ and supporting data-driven decision-making. By leveraging this dataset, healthca
 Select*from healthcare_dataset
 Converting Name column to capital initial
 
-```SELECT UPPER(Name) from healthcare_datasetUPDATE healthcare_dataset SET Name= UPPER(Name) from healthcare_datasetSELECT CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))from healthcare_datasetUPDATE healthcare_dataset SET Name=CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))SELECT REPLACE(Name, ' ', '_') from healthcare_dataset;UPDATE healthcare_dataset SET Name=REPLACE(Name, ' ', '_') from healthcare_dataset;SELECT UPPER(SUBSTRING(Name,(CHARINDEX('_', Name) + 1),(LEN(Name))))FROM healthcare_datasetALTER TABLE healthcare_dataset ADD Surname varchar(50)UPDATE healthcare_dataset SET Surname=UPPER(SUBSTRING(Name,(CHARINDEX('_', Name) + 1),(LEN(Name))))SELECT CONCAT(SUBSTRING(Surname,1,1),LOWER(SUBSTRING(Surname,2,LEN(Surname))))from healthcare_datasetUPDATE healthcare_dataset SET Surname=CONCAT(SUBSTRING(Surname,1,1),LOWER(SUBSTRING(Surname,2,LEN(Surname))))SELECT REPLACE(Name,SUBSTRING(Name,(CHARINDEX('_', Name)+1),(LEN(Name))),'')from healthcare_datasetUPDATE healthcare_dataset SET Name= REPLACE(Name,SUBSTRING(Name,(CHARINDEX('_', Name)+1),(LEN(Name))),'')SELECT REPLACE(Name,'_','')from healthcare_datasetUPDATE healthcare_dataset SET Name=REPLACE(Name,'_','')SELECT CONCAT(Name,' ',Surname)as Full_Name from healthcare_dataset UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname) ``Exec sp_rename 'healthcare_dataset.Full_Name','Patients','COLUMN' ALTER TABLE healthcare_dataset DROP COLUMN Surname ```
+Select*from healthcare_dataset
+---Converting Name column to capital initial
+
+```SELECT UPPER(Name) from healthcare_dataset
+UPDATE healthcare_dataset SET Name= UPPER(Name) from healthcare_dataset
+
+SELECT CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))from healthcare_dataset
+
+UPDATE healthcare_dataset SET Name=CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))
+
+SELECT REPLACE(Name, ' ', '_') from healthcare_dataset;
+
+UPDATE healthcare_dataset SET Name=REPLACE(Name, ' ', '_') from healthcare_dataset;
+
+SELECT UPPER(SUBSTRING(Name,(CHARINDEX('_', Name) + 1),(LEN(Name))))FROM healthcare_dataset
+
+ALTER TABLE healthcare_dataset ADD Surname varchar(50)
+
+UPDATE healthcare_dataset SET Surname=UPPER(SUBSTRING(Name,(CHARINDEX('_', Name) + 1),(LEN(Name))))
+
+SELECT CONCAT(SUBSTRING(Surname,1,1),LOWER(SUBSTRING(Surname,2,LEN(Surname))))from healthcare_dataset
+
+
+UPDATE healthcare_dataset SET Surname=CONCAT(SUBSTRING(Surname,1,1),LOWER(SUBSTRING(Surname,2,LEN(Surname))))
+
+SELECT REPLACE(Name,SUBSTRING(Name,(CHARINDEX('_', Name)+1),(LEN(Name))),'')from healthcare_dataset
+
+UPDATE healthcare_dataset SET Name= REPLACE(Name,SUBSTRING(Name,(CHARINDEX('_', Name)+1),(LEN(Name))),'')
+
+SELECT REPLACE(Name,'_','')from healthcare_dataset
+
+UPDATE healthcare_dataset SET Name=REPLACE(Name,'_','')
+
+SELECT CONCAT(Name,' ',Surname)as Full_Name from healthcare_dataset
+
+
+UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname)
+
+Exec sp_rename 'healthcare_dataset.Full_Name','Patients','COLUMN'
+
+ALTER TABLE healthcare_dataset DROP COLUMN Surname ```
