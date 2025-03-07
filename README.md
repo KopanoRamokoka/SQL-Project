@@ -3,14 +3,14 @@
 This is a raw healthcare dataset containing important information that will serve as a valuable resource in improving patient care, optimizing hospitals workflows
 and supporting data-driven decision-making. By leveraging this dataset, healthcare professionals, researchers and analysts can gain a deeper understanding of hospital performance,identify potential areas for improvement and enhance the overall quality of care delivered to patients
 
-######Below is the raw dataset captured
+###### Below is the raw dataset captured
 ![Screenshot 2025-03-05 210701](https://github.com/user-attachments/assets/1d0adaab-3146-4063-bac0-fc856a21a5fb)
 
-####Data Cleaning Process
+#### Data Cleaning Process
 ```Select*from healthcare_dataset
----Converting Name column to capital initial
+Converting Name column to capital initial
 
-SELECT UPPER(Name) from healthcare_dataset
+```SELECT UPPER(Name) from healthcare_dataset
 UPDATE healthcare_dataset SET Name= UPPER(Name) from healthcare_dataset
 
 SELECT CONCAT(SUBSTRING(Name,1,1),LOWER(SUBSTRING(Name,2,LEN(Name))))from healthcare_dataset
@@ -47,4 +47,4 @@ UPDATE healthcare_dataset SET Name=  CONCAT(Name,' ',Surname)
 
 Exec sp_rename 'healthcare_dataset.Full_Name','Patients','COLUMN'
 
-ALTER TABLE healthcare_dataset DROP COLUMN Surname ````
+ALTER TABLE healthcare_dataset DROP COLUMN Surname ```
