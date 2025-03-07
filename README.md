@@ -54,7 +54,7 @@ ALTER TABLE healthcare_dataset DROP COLUMN Surname
 ![Screenshot 2025-03-07 140507](https://github.com/user-attachments/assets/59f1dade-6c69-45fb-b791-61b9ac4ba6db)
 
 
-
+FULL PROJECT TO BE SEEN [HERE](https://github.com/KopanoRamokoka/SQL-Project/blob/main/SQL%20Healthcare%20dataset%20project.sql)
 
 
 
